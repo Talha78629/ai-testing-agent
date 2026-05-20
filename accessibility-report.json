@@ -1,0 +1,20 @@
+[
+  {
+    "issue": "Heading order is semantically incorrect. The heading level jumps unexpectedly (e.g., from h3 or h4 to h5) without incrementing by one, causing confusion in document structure navigation.",
+    "severity": "Moderate",
+    "affectedUsers": "Users relying on screen readers or other assistive technologies who navigate through content by heading levels, including users with visual impairments and cognitive disabilities.",
+    "fixRecommendation": "Adjust the heading levels to follow a logical, sequential order, ensuring heading levels only increase by one at a time (e.g., h2 followed by h3, not h5). Review the hierarchy of headings and correct the levels accordingly."
+  },
+  {
+    "issue": "Multiple landmarks with the same role (e.g., 'navigation') exist on the page without unique accessible names, making it difficult for assistive technology users to distinguish between them.",
+    "severity": "Moderate",
+    "affectedUsers": "Users of screen readers or assistive technologies who rely on landmarks for faster navigation, primarily users with visual impairments.",
+    "fixRecommendation": "Provide unique accessible names for each landmark by adding aria-label, aria-labelledby, or a title attribute to distinguish landmarks with the same role (e.g., aria-label=\"Primary navigation\", aria-label=\"Secondary navigation\")."
+  },
+  {
+    "issue": "The page does not contain a level-one heading (<h1>), which is important to define the main topic or purpose of the page.",
+    "severity": "Moderate",
+    "affectedUsers": "Users of screen readers and assistive technologies who rely on the main heading to understand page context quickly, including users with visual impairments and cognitive disabilities.",
+    "fixRecommendation": "Add a level-one heading (<h1>) that clearly describes the main topic or purpose of the page. Ensure it is present and visible at the top-level of the content."
+  }
+]

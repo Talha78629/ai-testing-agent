@@ -1,0 +1,111 @@
+[
+  {
+    "feature": "Username input field",
+    "type": "positive",
+    "steps": [
+      "Navigate to the login page",
+      "Enter a valid username in the username field",
+      "Verify the input accepts text"
+    ],
+    "expected": "The username field accepts the input without errors"
+  },
+  {
+    "feature": "Password input field",
+    "type": "positive",
+    "steps": [
+      "Navigate to the login page",
+      "Enter a valid password in the password field",
+      "Verify the input masks the password and accepts text"
+    ],
+    "expected": "The password field accepts the input and masks the characters"
+  },
+  {
+    "feature": "Submit button functionality",
+    "type": "positive",
+    "steps": [
+      "Enter valid username and password",
+      "Click on the 'Submit' button",
+      "Observe the form submission"
+    ],
+    "expected": "Form should submit successfully and proceed to the intended page"
+  },
+  {
+    "feature": "Navigation menu toggle",
+    "type": "positive",
+    "steps": [
+      "Click on the button with id 'toggle-navigation' and text 'open menu'",
+      "Verify the navigation menu opens"
+    ],
+    "expected": "Navigation menu should open upon clicking the button"
+  },
+  {
+    "feature": "Username input field",
+    "type": "negative",
+    "steps": [
+      "Navigate to the login page",
+      "Leave the username field empty",
+      "Enter a valid password",
+      "Click on the 'Submit' button"
+    ],
+    "expected": "Form submission should be prevented and an error message should indicate that username is required"
+  },
+  {
+    "feature": "Password input field",
+    "type": "negative",
+    "steps": [
+      "Navigate to the login page",
+      "Enter a valid username",
+      "Leave the password field empty",
+      "Click on the 'Submit' button"
+    ],
+    "expected": "Form submission should be prevented and an error message should indicate that password is required"
+  },
+  {
+    "feature": "Submit button with empty inputs",
+    "type": "negative",
+    "steps": [
+      "Navigate to the login page",
+      "Leave username and password fields empty",
+      "Click on the 'Submit' button"
+    ],
+    "expected": "Form submission should be prevented and error messages should appear for required fields"
+  },
+  {
+    "feature": "Username input field",
+    "type": "edge",
+    "steps": [
+      "Navigate to the login page",
+      "Enter maximum allowed characters in username field (e.g., 256 characters)",
+      "Attempt to submit the form"
+    ],
+    "expected": "Input should accept maximum characters without errors or truncate appropriately, form submission behaves accordingly"
+  },
+  {
+    "feature": "Password input field",
+    "type": "edge",
+    "steps": [
+      "Navigate to the login page",
+      "Enter maximum allowed characters in password field (e.g., 256 characters)",
+      "Attempt to submit the form"
+    ],
+    "expected": "Input should accept maximum characters without errors or truncate appropriately, form submission behaves accordingly"
+  },
+  {
+    "feature": "Button with no text and no id",
+    "type": "edge",
+    "steps": [
+      "Identify the button with empty 'text' and 'id'",
+      "Click on this button"
+    ],
+    "expected": "Button should either perform expected submit action or be inert without causing errors"
+  },
+  {
+    "feature": "Links accessibility",
+    "type": "edge",
+    "steps": [
+      "Verify all links are properly labeled and clickable",
+      "Specifically check for empty link text like \"Press \"Enter\" to skip to content\" and \"\" (empty string)"
+    ],
+    "expected": "\"Press \"Enter\" to skip to content\" link should function as skip link; empty or blank text links should not exist or be hidden from accessibility trees"
+  }
+]

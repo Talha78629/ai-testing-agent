@@ -1,0 +1,11 @@
+{
+  "selectors": [
+    {
+      "failedSelector": "#wrong-submit",
+      "healedSelector": "#submit",
+      "successCount": 1
+    }
+  ],
+  "failures": [],
+  "flows": []
+}

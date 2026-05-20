@@ -1,0 +1,7 @@
+{
+  "rootCause": "The selector '#wrong-button' does not exist or is incorrect, causing the click action to timeout waiting for a non-existent element.",
+  "issueType": "Test Automation Script Failure - Incorrect Selector",
+  "severity": "Medium",
+  "responsibleLayer": "Test Automation / UI Layer",
+  "fixRecommendation": "Verify and correct the selector used in the test script to match the actual button element on the page. Ensure the button intended to be clicked is visible and the selector '#wrong-button' is accurate."
+}

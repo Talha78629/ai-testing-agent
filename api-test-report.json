@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Verify GET root endpoint returns HTML content",
+    "method": "GET",
+    "testType": "Positive",
+    "validation": "Status code is 200 and response content-type is text/html, and body contains <html> tag"
+  },
+  {
+    "name": "Verify GET style.css returns CSS content",
+    "method": "GET",
+    "testType": "Positive",
+    "validation": "Status code is 200 and body starts with CSS comment or valid CSS content"
+  },
+  {
+    "name": "Verify GET mockend.svg returns valid SVG content",
+    "method": "GET",
+    "testType": "Positive",
+    "validation": "Status code is 200 and response content contains <svg> tag"
+  },
+  {
+    "name": "Verify GET png image returns binary PNG data",
+    "method": "GET",
+    "testType": "Positive",
+    "validation": "Status code is 200 and body starts with PNG file signature bytes"
+  },
+  {
+    "name": "Verify POST to google-analytics.com returns 204 no content",
+    "method": "POST",
+    "testType": "Positive",
+    "validation": "Status code is 204 No Content and response body is empty"
+  },
+  {
+    "name": "Verify GET ads API returns JSONP response",
+    "method": "GET",
+    "testType": "Positive",
+    "validation": "Status code is 200 and body contains a valid JSONP callback wrapper"
+  },
+  {
+    "name": "Verify POST to /cdn-cgi/rum returns 204 no content",
+    "method": "POST",
+    "testType": "Positive",
+    "validation": "Status code is 204 No Content and response body is empty"
+  },
+  {
+    "name": "Verify GET /posts/1 returns JSON post object",
+    "method": "GET",
+    "testType": "Positive",
+    "validation": "Status code is 200 and response body is a JSON object containing userId, id, title, and body fields"
+  },
+  {
+    "name": "Verify accessing non-existent endpoint returns 404",
+    "method": "GET",
+    "testType": "Negative",
+    "validation": "Status code is 404 Not Found"
+  },
+  {
+    "name": "Verify POST to GET-only endpoint returns 405 Method Not Allowed",
+    "method": "POST",
+    "testType": "Negative",
+    "validation": "Status code is 405 or appropriate error response for incorrect method usage"
+  },
+  {
+    "name": "Verify GET request with invalid query parameters returns 400 or ignores parameters",
+    "method": "GET",
+    "testType": "Negative",
+    "validation": "Status code is 400 Bad Request or 200 with default response ignoring invalid params"
+  },
+  {
+    "name": "Verify GET /posts/{non-numeric} returns 400 or 404",
+    "method": "GET",
+    "testType": "Negative",
+    "validation": "Status code is 400 Bad Request or 404 Not Found when ID is invalid"
+  },
+  {
+    "name": "Verify GET /posts/{999999} returns 404 for non-existent post",
+    "method": "GET",
+    "testType": "Negative",
+    "validation": "Status code is 404 Not Found when resource ID does not exist"
+  },
+  {
+    "name": "Verify GET with excessive query string length returns 414 or handled gracefully",
+    "method": "GET",
+    "testType": "Edge Case",
+    "validation": "Status code is 414 URI Too Long or 200 with ignored extra parameters"
+  },
+  {
+    "name": "Verify GET /posts/0 or negative ID returns 400 or 404",
+    "method": "GET",
+    "testType": "Edge Case",
+    "validation": "Status code is 400 Bad Request or 404 Not Found for invalid ID values"
+  },
+  {
+    "name": "Verify GET resources with very large numeric IDs",
+    "method": "GET",
+    "testType": "Edge Case",
+    "validation": "Status code is 404 Not Found or proper error indicating resource doesn't exist"
+  },
+  {
+    "name": "Verify responses do not expose sensitive headers like Server or X-Powered-By",
+    "method": "GET",
+    "testType": "Security",
+    "validation": "Sensitive server headers are not present in response headers"
+  },
+  {
+    "name": "Verify no JSONP callback injection possible in ads API URL",
+    "method": "GET",
+    "testType": "Security",
+    "validation": "Callback parameter is sanitized and no executable JS injection in response body"
+  },
+  {
+    "name": "Verify no injection possible with query parameters in /posts endpoint",
+    "method": "GET",
+    "testType": "Security",
+    "validation": "Input parameters are sanitized and response does not contain injected script"
+  },
+  {
+    "name": "Verify CORS headers are present and correctly configured",
+    "method": "OPTIONS",
+    "testType": "Security",
+    "validation": "Correct Access-Control-Allow-Origin header present allowing expected domains"
+  },
+  {
+    "name": "Verify HTTPS endpoints have valid SSL/TLS certificate",
+    "method": "GET",
+    "testType": "Security",
+    "validation": "SSL certificate is valid and trusted for all HTTPS URLs"
+  },
+  {
+    "name": "Verify GET /posts/1 responds within acceptable time threshold",
+    "method": "GET",
+    "testType": "Performance",
+    "validation": "Response time is less than 500ms under normal load"
+  },
+  {
+    "name": "Verify GET root endpoint HTML page loads under 1 second",
+    "method": "GET",
+    "testType": "Performance",
+    "validation": "Response time is under 1 second"
+  },
+  {
+    "name": "Verify bulk GET requests to /posts endpoint handle concurrency gracefully",
+    "method": "GET",
+    "testType": "Performance",
+    "validation": "System remains responsive and no significant failure when 100 concurrent requests are made"
+  },
+  {
+    "name": "Verify static assets (style.css, svg, png) load quickly within 300ms",
+    "method": "GET",
+    "testType": "Performance",
+    "validation": "Response time for static assets is consistently under 300ms"
+  },
+  {
+    "name": "Verify POST endpoints (analytics, rum) handle requests correctly under burst traffic",
+    "method": "POST",
+    "testType": "Performance",
+    "validation": "No errors or timeouts occur when 50 POST requests are fired in a short time"
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "buttons": [
+    {
+      "text": "",
+      "id": "",
+      "type": "submit",
+      "ariaLabel": null,
+      "role": null
+    },
+    {
+      "text": "open menu",
+      "id": "toggle-navigation",
+      "type": "submit",
+      "ariaLabel": null,
+      "role": null
+    },
+    {
+      "text": "Submit",
+      "id": "submit",
+      "type": "submit",
+      "ariaLabel": null,
+      "role": null
+    }
+  ],
+  "inputs": [
+    {
+      "type": "text",
+      "name": "username",
+      "placeholder": "",
+      "id": "username",
+      "ariaLabel": null
+    },
+    {
+      "type": "password",
+      "name": "password",
+      "placeholder": "",
+      "id": "password",
+      "ariaLabel": null
+    }
+  ],
+  "links": [
+    "Press \"Enter\" to skip to content",
+    "",
+    "Home",
+    "Practice",
+    "Courses",
+    "Blog",
+    "Contact",
+    "Practice Test Automation.",
+    "Privacy Policy"
+  ]
+}

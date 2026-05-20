@@ -1,0 +1,9 @@
+{
+  "regressions": [
+    {
+      "severity": "minor",
+      "issue": "The footer text with copyright and Privacy Policy is missing in the second screenshot.",
+      "recommendation": "Restore the footer section on the page to ensure consistent branding and legal information display."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "buttons": [
+    {
+      "original": {
+        "text": "",
+        "id": "",
+        "type": "submit",
+        "ariaLabel": null,
+        "role": null
+      },
+      "smartLocator": null
+    },
+    {
+      "original": {
+        "text": "open menu",
+        "id": "toggle-navigation",
+        "type": "submit",
+        "ariaLabel": null,
+        "role": null
+      },
+      "smartLocator": {
+        "strategy": "getByRole",
+        "locator": "page.getByRole('button', { name: 'open menu' })"
+      }
+    },
+    {
+      "original": {
+        "text": "Submit",
+        "id": "submit",
+        "type": "submit",
+        "ariaLabel": null,
+        "role": null
+      },
+      "smartLocator": {
+        "strategy": "getByRole",
+        "locator": "page.getByRole('button', { name: 'Submit' })"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "original": {
+        "type": "text",
+        "name": "username",
+        "placeholder": "",
+        "id": "username",
+        "ariaLabel": null
+      },
+      "smartLocator": {
+        "strategy": "name",
+        "locator": "page.locator('[name=\"username\"]')"
+      }
+    },
+    {
+      "original": {
+        "type": "password",
+        "name": "password",
+        "placeholder": "",
+        "id": "password",
+        "ariaLabel": null
+      },
+      "smartLocator": {
+        "strategy": "name",
+        "locator": "page.locator('[name=\"password\"]')"
+      }
+    }
+  ]
+}

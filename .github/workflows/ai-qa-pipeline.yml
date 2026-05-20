@@ -1,0 +1,58 @@
+name: AI QA Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+  ai-testing:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Run AI Test Generation
+        run: node generate-testcases.js
+
+      - name: Run Exploratory AI
+        run: node exploratory-test.js
+
+      - name: Run Visual Regression AI
+        run: node visual-regression-test.spec.js
+
+      - name: Run Accessibility AI
+        run: node accessibility-test.js
+
+      - name: Run API AI Agent
+        run: node api-test.js
+
+      - name: Run RCA Agent
+        run: node rca-test.js
+
+      - name: Upload Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-qa-reports
+          path: |
+            *.json
+            *.png

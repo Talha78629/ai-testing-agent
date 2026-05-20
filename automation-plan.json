@@ -1,0 +1,244 @@
+[
+  {
+    "testName": "Login with valid username and password",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "fill",
+        "selector": "#username",
+        "value": "validUser"
+      },
+      {
+        "action": "fill",
+        "selector": "#password",
+        "value": "validPass123"
+      },
+      {
+        "action": "click",
+        "selector": "#submit"
+      }
+    ]
+  },
+  {
+    "testName": "Open menu button toggles navigation",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "click",
+        "selector": "#toggle-navigation"
+      }
+    ]
+  },
+  {
+    "testName": "Submit button is displayed and clickable",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "assertVisible",
+        "selector": "#submit"
+      }
+    ]
+  },
+  {
+    "testName": "Login submission with empty username",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "fill",
+        "selector": "#username",
+        "value": ""
+      },
+      {
+        "action": "fill",
+        "selector": "#password",
+        "value": "validPass123"
+      },
+      {
+        "action": "click",
+        "selector": "#submit"
+      }
+    ]
+  },
+  {
+    "testName": "Login submission with empty password",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "fill",
+        "selector": "#username",
+        "value": "validUser"
+      },
+      {
+        "action": "fill",
+        "selector": "#password",
+        "value": ""
+      },
+      {
+        "action": "click",
+        "selector": "#submit"
+      }
+    ]
+  },
+  {
+    "testName": "Login submission with both fields empty",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "fill",
+        "selector": "#username",
+        "value": ""
+      },
+      {
+        "action": "fill",
+        "selector": "#password",
+        "value": ""
+      },
+      {
+        "action": "click",
+        "selector": "#submit"
+      }
+    ]
+  },
+  {
+    "testName": "Open menu button with invalid id",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "click",
+        "selector": "#invalid-id"
+      }
+    ]
+  },
+  {
+    "testName": "Username field accepts 256 characters input",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "fill",
+        "selector": "#username",
+        "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "action": "fill",
+        "selector": "#password",
+        "value": "validPass123"
+      },
+      {
+        "action": "click",
+        "selector": "#submit"
+      }
+    ]
+  },
+  {
+    "testName": "Password field accepts special characters and spaces",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "fill",
+        "selector": "#username",
+        "value": "validUser"
+      },
+      {
+        "action": "fill",
+        "selector": "#password",
+        "value": "!@# $%^&*()_+{}|:\"<>?"
+      },
+      {
+        "action": "click",
+        "selector": "#submit"
+      }
+    ]
+  },
+  {
+    "testName": "Input fields with whitespace only",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "fill",
+        "selector": "#username",
+        "value": "     "
+      },
+      {
+        "action": "fill",
+        "selector": "#password",
+        "value": "\t  "
+      },
+      {
+        "action": "click",
+        "selector": "#submit"
+      }
+    ]
+  },
+  {
+    "testName": "Open menu button accessibility with keyboard",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "focus",
+        "selector": "#toggle-navigation"
+      },
+      {
+        "action": "pressKey",
+        "selector": "#toggle-navigation",
+        "value": "Enter"
+      }
+    ]
+  },
+  {
+    "testName": "Submit login form using Enter key",
+    "steps": [
+      {
+        "action": "goto",
+        "url": "https://practicetestautomation.com/practice-test-login/"
+      },
+      {
+        "action": "fill",
+        "selector": "#username",
+        "value": "validUser"
+      },
+      {
+        "action": "fill",
+        "selector": "#password",
+        "value": "validPass123"
+      },
+      {
+        "action": "pressKey",
+        "selector": "#password",
+        "value": "Enter"
+      }
+    ]
+  }
+]

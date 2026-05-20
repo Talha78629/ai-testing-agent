@@ -1,0 +1,54 @@
+{
+  "issues": [
+    {
+      "severity": "minor",
+      "problem": "The header logo and text block are aligned to the left with a large blank space to the right, resulting in unbalanced layout.",
+      "recommendation": "Center the header content horizontally or add additional elements on the right side to balance the layout."
+    },
+    {
+      "severity": "minor",
+      "problem": "Navigation menu items in the black header have inconsistent spacing; 'PRACTICE' is not spaced evenly relative to other menu items.",
+      "recommendation": "Adjust padding/margin between navigation links to ensure consistent spacing."
+    },
+    {
+      "severity": "minor",
+      "problem": "Form input fields and labels are left aligned but appear close to the left edge of the form container, making it look cramped.",
+      "recommendation": "Add consistent padding/margin around form fields to improve whitespace and readability."
+    },
+    {
+      "severity": "minor",
+      "problem": "'Submit' button is aligned to the left under the password field, which looks inconsistent with center-aligned content above.",
+      "recommendation": "Center-align the submit button under the input fields for visual consistency."
+    },
+    {
+      "severity": "minor",
+      "problem": "The instruction text and example credentials below the 'Test login' heading are center aligned, while the form is left aligned, causing visual disconnect.",
+      "recommendation": "Align the instruction text and form consistently either centered or left aligned."
+    },
+    {
+      "severity": "minor",
+      "problem": "The page content's footer copyright and privacy policy text are center aligned but very close to the page bottom without adequate padding.",
+      "recommendation": "Add bottom padding/margin to footer text for better visual separation from the browser bottom."
+    },
+    {
+      "severity": "minor",
+      "problem": "There is a lack of visible focus indicators on interactive elements such as the input fields and the submit button.",
+      "recommendation": "Ensure input fields and buttons have clear, visible focus styles for better accessibility."
+    },
+    {
+      "severity": "minor",
+      "problem": "The password input field uses a plain text field instead of masking characters.",
+      "recommendation": "Use a password input type to mask entered characters for privacy."
+    },
+    {
+      "severity": "minor",
+      "problem": "The text color contrast on the black header navigation links (white text on black) is good, but the logo area uses black on white and some thin text which may cause contrast issues for some users.",
+      "recommendation": "Verify and ensure all text meets WCAG contrast ratios, especially thin fonts."
+    },
+    {
+      "severity": "minor",
+      "problem": "Lack of ARIA labels or explicit labeling for input fields may impact screen reader users.",
+      "recommendation": "Add explicit labels or aria-label attributes bound to the input elements."
+    }
+  ]
+}
