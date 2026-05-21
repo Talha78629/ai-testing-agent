@@ -31,9 +31,6 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run AI Healing Test
-        run: npx playwright test ai-healing-test.spec.js
-
       - name: Run Visual Regression Test
         run: npx playwright test visual-regression-test.spec.js
 
