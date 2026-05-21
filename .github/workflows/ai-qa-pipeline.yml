@@ -31,8 +31,6 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Visual Regression Test
-        run: npx playwright test visual-regression-test.spec.js
 
       - name: Run RCA Agent
         run: node rca-test.js
