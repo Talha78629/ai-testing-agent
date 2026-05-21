@@ -12,7 +12,7 @@ async function runRCA() {
 
     const browser =
     await chromium.launch({
-        headless: false
+        headless: true
     });
 
     const page =
