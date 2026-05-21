@@ -1,0 +1,21 @@
+{
+  "accessibilityIssues": 12,
+
+  "rcaFailures": 4,
+
+  "aiSummary":
+    "Failures increased due to selector mismatch after deployment.",
+
+  "history": [
+    { "day": "Mon", "failures": 2 },
+    { "day": "Tue", "failures": 5 },
+    { "day": "Wed", "failures": 3 },
+    { "day": "Thu", "failures": 8 },
+    { "day": "Fri", "failures": 4 }
+  ],
+
+  "screenshots": [
+    "/screenshots/failure1.png",
+    "/screenshots/failure2.png"
+  ]
+}
