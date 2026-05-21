@@ -1,0 +1,214 @@
+[
+  {
+    "time": "10:25:50 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "10:25:56 pm",
+    "message": "Opened Login Page"
+  },
+  {
+    "time": "10:25:56 pm",
+    "message": "Trying selector: #wrong-submit"
+  },
+  {
+    "time": "10:25:58 pm",
+    "message": "Primary selector failed"
+  },
+  {
+    "time": "10:25:58 pm",
+    "message": "Captured page DOM"
+  },
+  {
+    "time": "10:26:01 pm",
+    "message": "AI suggested selector: #submit"
+  },
+  {
+    "time": "10:26:01 pm",
+    "message": "AI healing successful"
+  },
+  {
+    "time": "10:36:09 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "10:36:15 pm",
+    "message": "Opened Login Page"
+  },
+  {
+    "time": "10:36:15 pm",
+    "message": "Trying selector: #wrong-submit"
+  },
+  {
+    "time": "10:36:17 pm",
+    "message": "Primary selector failed"
+  },
+  {
+    "time": "10:36:17 pm",
+    "message": "Captured page DOM"
+  },
+  {
+    "time": "10:36:20 pm",
+    "message": "AI suggested selector: #submit"
+  },
+  {
+    "time": "10:36:20 pm",
+    "message": "AI healing successful"
+  },
+  {
+    "time": "10:38:27 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "10:44:11 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "10:44:19 pm",
+    "message": "Opened Login Page"
+  },
+  {
+    "time": "10:44:19 pm",
+    "message": "Trying selector: #wrong-submit"
+  },
+  {
+    "time": "10:44:21 pm",
+    "message": "Primary selector failed"
+  },
+  {
+    "time": "10:44:21 pm",
+    "message": "Captured page DOM"
+  },
+  {
+    "time": "10:44:25 pm",
+    "message": "AI suggested selector: #submit"
+  },
+  {
+    "time": "10:44:25 pm",
+    "message": "AI healing successful"
+  },
+  {
+    "time": "10:47:04 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "10:48:04 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "10:50:46 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "10:52:51 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "10:53:01 pm",
+    "message": "Opened Login Page"
+  },
+  {
+    "time": "10:53:01 pm",
+    "message": "Trying selector: #wrong-submit"
+  },
+  {
+    "time": "10:53:03 pm",
+    "message": "Primary selector failed"
+  },
+  {
+    "time": "10:53:03 pm",
+    "message": "Captured page DOM"
+  },
+  {
+    "time": "10:53:05 pm",
+    "message": "AI suggested selector: #submit"
+  },
+  {
+    "time": "10:53:05 pm",
+    "message": "AI healing successful"
+  },
+  {
+    "time": "10:57:49 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "10:57:59 pm",
+    "message": "Opened Login Page"
+  },
+  {
+    "time": "10:57:59 pm",
+    "message": "Trying selector: #wrong-submit"
+  },
+  {
+    "time": "10:58:01 pm",
+    "message": "Primary selector failed"
+  },
+  {
+    "time": "10:58:01 pm",
+    "message": "Captured page DOM"
+  },
+  {
+    "time": "10:58:02 pm",
+    "message": "AI suggested selector: #submit"
+  },
+  {
+    "time": "10:58:03 pm",
+    "message": "AI healing successful"
+  },
+  {
+    "time": "10:59:46 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "10:59:59 pm",
+    "message": "Opened Login Page"
+  },
+  {
+    "time": "10:59:59 pm",
+    "message": "Trying selector: #wrong-submit"
+  },
+  {
+    "time": "11:00:01 pm",
+    "message": "Primary selector failed"
+  },
+  {
+    "time": "11:00:01 pm",
+    "message": "Captured page DOM"
+  },
+  {
+    "time": "11:00:03 pm",
+    "message": "AI suggested selector: #submit"
+  },
+  {
+    "time": "11:00:03 pm",
+    "message": "AI healing successful"
+  },
+  {
+    "time": "11:21:07 pm",
+    "message": "Starting AI Healing Test"
+  },
+  {
+    "time": "11:21:16 pm",
+    "message": "Opened Login Page"
+  },
+  {
+    "time": "11:21:16 pm",
+    "message": "Trying selector: #wrong-submit"
+  },
+  {
+    "time": "11:21:18 pm",
+    "message": "Primary selector failed"
+  },
+  {
+    "time": "11:21:18 pm",
+    "message": "Captured page DOM"
+  },
+  {
+    "time": "11:21:22 pm",
+    "message": "AI suggested selector: #submit"
+  },
+  {
+    "time": "11:21:22 pm",
+    "message": "AI healing successful"
+  }
+]

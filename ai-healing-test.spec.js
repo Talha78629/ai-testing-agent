@@ -1,65 +1,117 @@
 const { test } =
-require('@playwright/test');
-test.setTimeout(60000);
+require('@playwright/test')
+
+test.setTimeout(60000)
+const {
+  updateAnalytics
+} = require('./analytics-engine')
+const {
+  addLog
+} = require('./logger')
 
 const {
-    aiHealSelector
-} = require('./ai-healing-engine');
+  aiHealSelector
+} = require('./ai-healing-engine')
 
 test(
-    'AI Healing Test',
-    async ({ page }) => {
+  'AI Healing Test',
 
-        await page.goto(
-'https://practicetestautomation.com/practice-test-login/'
-        );
+  async ({ page }) => {
 
-        const failedSelector =
-            '#wrong-submit';
+    await addLog(
+      'Starting AI Healing Test'
+    )
 
-        try {
+await page.goto(
+  'https://practicetestautomation.com/practice-test-login/',
+  {
+    waitUntil: 'domcontentloaded',
+    timeout: 30000
+  }
+)
 
-            // FAST FAILURE
-            await page.locator(
-                failedSelector
-            ).click({
-                timeout: 2000
-            });
+await page.waitForTimeout(3000)
 
-        } catch (error) {
+    await addLog(
+      'Opened Login Page'
+    )
 
-            console.log(
-                '\n❌ Selector failed'
-            );
+    const failedSelector =
+      '#wrong-submit'
 
-            // Capture DOM immediately
-            const html =
-                await page.content();
+    try {
 
-            // AI healing
-            const healed =
-                await aiHealSelector(
-                    failedSelector,
-                    html
-                );
+      await addLog(
+        `Trying selector: ${failedSelector}`
+      )
 
-            console.log(
-                '\n🤖 AI Suggested:',
-                healed
-            );
+      // Intentional failure
+      await page.locator(
+        failedSelector
+      ).click({
+        timeout: 2000
+      })
 
-            // Retry using healed selector
-            await page.locator(
-                healed.selector
-            ).click({
-                timeout: 5000
-            });
+    } catch (error) {
 
-            console.log(
-                '\n✅ AI healing successful'
-            );
+      console.log(
+        '\n❌ Selector failed'
+      )
+await page.screenshot({
+    path:
+      './qa-dashboard/public/screenshots/login-failure.png',
+    fullPage: true
+  })
 
-        }
+      await addLog(
+        'Primary selector failed'
+      )
+
+      // Capture DOM
+      const html =
+        await page.content()
+
+      await addLog(
+        'Captured page DOM'
+      )
+
+      // AI healing
+      const healed =
+        await aiHealSelector(
+          failedSelector,
+          html
+        )
+
+      console.log(
+        '\n🤖 AI Suggested:',
+        healed
+      )
+
+      await addLog(
+        `AI suggested selector: ${healed.selector}`
+      )
+
+      // Retry using healed selector
+      await page.locator(
+        healed.selector
+      ).click({
+        timeout: 5000
+      })
+
+      console.log(
+        '\n✅ AI healing successful'
+      )
+
+      await addLog(
+        'AI healing successful'
+      )
+      await updateAnalytics({
+  status: 'passed',
+  healed: true,
+  failureType: 'Broken Selector'
+})
 
     }
-);
+
+  }
+)

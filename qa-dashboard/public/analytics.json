@@ -1,0 +1,32 @@
+{
+  "totalTests": 6,
+  "passed": 6,
+  "failed": 0,
+  "healed": 6,
+  "failureTypes": [
+    {
+      "type": "Broken Selector",
+      "time": "10:36:20 pm"
+    },
+    {
+      "type": "Broken Selector",
+      "time": "10:44:25 pm"
+    },
+    {
+      "type": "Broken Selector",
+      "time": "10:53:05 pm"
+    },
+    {
+      "type": "Broken Selector",
+      "time": "10:58:03 pm"
+    },
+    {
+      "type": "Broken Selector",
+      "time": "11:00:03 pm"
+    },
+    {
+      "type": "Broken Selector",
+      "time": "11:21:22 pm"
+    }
+  ]
+}

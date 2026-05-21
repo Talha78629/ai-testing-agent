@@ -1,133 +1,541 @@
 body {
+
   margin: 0;
+
   background: #020617;
+
   color: white;
+
   font-family: Arial, sans-serif;
+
 }
 
-.container {
-  padding: 40px;
-}
+.dashboard {
 
-h1 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.cards {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+
+  min-height: 100vh;
+
 }
 
-.card {
-  background: #0f172a;
-  padding: 30px;
-  border-radius: 14px;
+/* SIDEBAR */
+
+.sidebar {
+
   width: 250px;
-  text-align: center;
-  box-shadow: 0px 0px 20px rgba(0,255,150,0.15);
-}
 
-.card p {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.chart-card {
-  margin-top: 50px;
   background: #0f172a;
+
   padding: 30px;
-  border-radius: 14px;
+
+  border-right: 1px solid #1e293b;
+
+}
+
+.sidebar h2 {
+
+  margin-bottom: 40px;
+
+}
+
+.sidebar ul {
+
+  list-style: none;
+
+  padding: 0;
+
+}
+
+.sidebar li {
+
+  padding: 15px 0;
+
+  cursor: pointer;
+
+  color: #94a3b8;
+
+}
+
+.sidebar li:hover {
+
+  color: #00ff99;
+
+}
+
+/* MAIN */
+
+.main-content {
+
+  flex: 1;
+
+  padding: 30px;
+
+}
+
+.topbar {
+
   display: flex;
-  flex-direction: column;
+
+  justify-content: space-between;
+
   align-items: center;
-}
-
-.ai-card {
-
-  margin-top: 40px;
-
-  background: #0f172a;
-
-  padding: 30px;
-
-  border-radius: 14px;
-
-  box-shadow: 0px 0px 20px rgba(0,255,150,0.15);
 
 }
 
-.ai-card h2 {
-
-  margin-bottom: 20px;
-
-}
-
-.ai-card p {
-
-  font-size: 18px;
-
-  line-height: 1.6;
-
-  color: #cbd5e1;
-
-}
-.gallery-card {
-
-  margin-top: 40px;
-
-  background: #0f172a;
-
-  padding: 30px;
-
-  border-radius: 14px;
-
-}
-
-.gallery {
-
-  display: flex;
-
-  gap: 20px;
-
-  flex-wrap: wrap;
-
-  margin-top: 20px;
-
-}
-
-.gallery img {
-
-  width: 350px;
-
-  border-radius: 12px;
-
-  border: 2px solid #1e293b;
-
-}
-.download-btn {
+.deploy-btn {
 
   background: #00ff99;
 
   border: none;
 
-  padding: 14px 20px;
+  padding: 12px 20px;
 
   border-radius: 10px;
-
-  font-size: 16px;
 
   font-weight: bold;
 
   cursor: pointer;
 
+}
+
+/* KPI */
+
+.kpi-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  margin-top: 30px;
+
+}
+
+.kpi-card {
+
+  background: rgba(15, 23, 42, 0.8);
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 0 20px rgba(0,255,150,0.1);
+
+}
+
+.kpi-card p {
+
+  font-size: 40px;
+
+  margin: 10px 0 0;
+
+}
+
+.icon {
+
+  font-size: 30px;
+
+}
+
+.red { color: #ff4d6d; }
+.green { color: #00ff99; }
+.blue { color: #38bdf8; }
+.yellow { color: #facc15; }
+
+/* CHARTS */
+
+.charts-grid {
+
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 20px;
+
+  margin-top: 30px;
+
+}
+
+.chart-card {
+
+  background: #0f172a;
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+}
+
+/* AI PANEL */
+
+.ai-panel {
+
+  margin-top: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #111827
+  );
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  border: 1px solid #00ff99;
+
+}
+
+/* TABLE */
+
+.table-card {
+
+  margin-top: 30px;
+
+  background: #0f172a;
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+}
+
+table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+}
+
+th, td {
+
+  padding: 15px;
+
+  border-bottom: 1px solid #1e293b;
+
+}
+
+.failed {
+
+  color: #ff4d6d;
+
+}
+
+.passed {
+
+  color: #00ff99;
+
+}
+
+.sidebar a {
+
+  text-decoration: none;
+
+  color: #94a3b8;
+
+}
+
+.sidebar a:hover {
+
+  color: #00ff99;
+
+}
+.page-title {
+
+  font-size: 32px;
   margin-bottom: 30px;
 
 }
 
-.download-btn:hover {
+.stats-grid {
 
-  opacity: 0.9;
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+
+}
+
+.stat-card {
+
+  background: #1e293b;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  transition: 0.3s;
+
+}
+
+.stat-card:hover {
+
+  transform: translateY(-5px);
+
+}
+
+.chart-container {
+
+  margin-top: 40px;
+
+  background: #1e293b;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+}
+
+.rca-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 20px;
+
+}
+
+.rca-card {
+
+  background: #1e293b;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+}
+
+.gallery-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 20px;
+
+}
+
+.gallery-grid img {
+
+  width: 100%;
+
+  border-radius: 20px;
+
+}
+
+.issue-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: #1e293b;
+
+}
+
+.issue-table th,
+.issue-table td {
+
+  padding: 20px;
+
+  border-bottom: 1px solid #334155;
+
+}
+
+.reports-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 20px;
+
+}
+
+.report-card {
+
+  background: #1e293b;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+}
+
+.report-card button {
+
+  margin-top: 20px;
+
+  background: #00ff99;
+
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+}
+
+.analyze-btn {
+
+  background: #00ff99;
+
+  border: none;
+
+  padding: 15px 30px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+}
+
+.analysis-box {
+
+  margin-top: 30px;
+
+  background: #111827;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  line-height: 1.8;
+
+  color: white;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  overflow-x: hidden;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  max-height: 600px;
+
+  border: 1px solid #1e293b;
+
+}
+
+.analysis-box pre {
+
+  margin: 0;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+  overflow-wrap: break-word;
+
+  font-family: 'Courier New', monospace;
+
+  font-size: 16px;
+
+}
+.logs-container {
+
+  margin-top: 30px;
+
+  background: #020617;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  height: 500px;
+
+  overflow-y: auto;
+
+  font-family: monospace;
+
+}
+
+.log-line {
+
+  padding: 10px;
+
+  border-bottom: 1px solid #1e293b;
+
+  color: #00ff99;
+
+}
+.failure-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 25px;
+
+  margin-top: 30px;
+
+}
+
+.failure-card {
+
+  background: #1e293b;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 0 20px rgba(0,0,0,0.3);
+
+}
+
+.failure-card:hover {
+
+  transform: translateY(-5px);
+
+}
+
+.failure-card img {
+
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+}
+
+.failure-card h2 {
+
+  padding: 20px 20px 10px;
+
+}
+
+.failure-card p {
+
+  padding: 0 20px 20px;
+
+  color: #cbd5e1;
 
 }
